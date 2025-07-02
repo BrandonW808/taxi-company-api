@@ -1,4 +1,4 @@
-// models/driver.js
+// models/ride.ts
 import mongoose, { Document, Schema } from 'mongoose';
 
 // Ride Schema
@@ -46,13 +46,11 @@ const rideSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-
     startTime: Date,
     endTime: Date,
     fare: Number,
     payment: {
-        method
-            : { type: String },
+        method: { type: String },
         tip: { type: Number },
         amountPaid: { type: Number },
     }
